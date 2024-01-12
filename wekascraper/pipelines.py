@@ -7,6 +7,7 @@
 # useful for handling different item types with a single interface
 from itemadapter import ItemAdapter
 from scrapy.exceptions import DropItem
+import psycopg2
 
 
 class WekascraperPipeline:
@@ -45,4 +46,18 @@ class DuplicatesPipeline:
             return item
 
 
+class SavingToPostgresPipeline(object):
+    def __init__(self):
+        self.create_connection()
+
+    def create_connection(self):
+        pass
+
+        # self.curr = self.connection.cursor()
+
+    def process_item(self, item, spider):
+        self.store_db(item)
+
+    def store_db(self, item):
+        pass
 
