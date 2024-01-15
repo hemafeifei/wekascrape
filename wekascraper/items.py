@@ -28,3 +28,14 @@ class BaiduIndex:
     url: Optional[str] = None
     image_dt: Optional[str] = field(default=None)
     scrape_ts: datetime = field(default=None)
+
+@dataclass
+class WeiboIndex:
+    search_rank: Optional[int] = field(default=None)
+    topic: str = field(default=None)
+    search_index: Optional[int] = field(default=None)
+    url: Optional[str] = None
+    channel_type: Optional[str] = None
+    category: Optional[str] = None
+    image_dt: Optional[str] = field(default=None)
+    scrape_ts: datetime = field(default=None)
