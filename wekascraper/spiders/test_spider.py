@@ -1,6 +1,6 @@
 import scrapy
 from wekascraper.items import ChocolateProduct
-from wekascraper.itemsloader import ChocolateProductLoader
+from wekascraper.itemsloader import SearchIndexLoader
 import re
 
 class ChocolateSpider(scrapy.Spider):
