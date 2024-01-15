@@ -20,6 +20,7 @@ class ChocolateProduct:
     price: Optional[float] = field(default=None)
     url: Optional[str] = None
 
+
 @dataclass
 class BaiduIndex:
     search_rank: Optional[int] = field(default=None)
@@ -28,6 +29,7 @@ class BaiduIndex:
     url: Optional[str] = None
     image_dt: Optional[str] = field(default=None)
     scrape_ts: datetime = field(default=None)
+
 
 @dataclass
 class WeiboIndex:
@@ -39,3 +41,14 @@ class WeiboIndex:
     category: Optional[str] = None
     image_dt: Optional[str] = field(default=None)
     scrape_ts: datetime = field(default=None)
+
+
+@dataclass
+class ZhihuIndex:
+    search_rank: Optional[int] = field(default=None)
+    topic: str = field(default=None)
+    search_index: Optional[int] = field(default=None)
+    url: Optional[str] = None
+    image_dt: Optional[str] = field(default=None)
+    scrape_ts: datetime = field(default=None)
+
